@@ -81,6 +81,9 @@ if(isset($_GET['sid'])){
                         if ($row['site_status'] == 8) {
                             echo "Payment Complete. Assign SUpervisor";
                         }
+                        if ($row['site_status'] == 9) {
+                            echo "Supervisor Assigned";
+                        }
                         if ($row['site_status'] == 10) {
                             echo "Site Preparation COmpleted";
                         }

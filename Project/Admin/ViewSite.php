@@ -121,20 +121,25 @@ $row = $res->fetch_assoc();
             <div class="col-lg-6">
                 <div class="card">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="engineer-photo.jpg" alt="Supervisor Photo" class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <?php
+                    <?php
                         if ($row['site_status'] > 8) {
                             $gryo = "select * from tbl_supervisor where supervisor_id=" . $row['supervisor_id'];
                             $reso3 = $conn->query($gryo);
                             $rowo2 = $reso3->fetch_assoc();
-                            echo $rowo2['supervisor_name'];
+                            
                         }
                         ?>
+                        <div class="col-md-4">
+                        <img src="../Assets/Files/Supervisor/Photo/<?php echo $rowo2['supervisor_photo'] ?>" alt="Supervisor Photo" class="img-fluid" style="
+    object-fit: cover;
+    height: 100%;">
+                            
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php
+                                echo $rowo2['supervisor_name'];
+                                    ?>
                                 </h5>
                                 <p class="card-text"><strong>Contact:</strong>
                                     <?php
@@ -178,6 +183,16 @@ $row = $res->fetch_assoc();
         </div>
 
     </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text"><strong>Action</strong>
+                <?php if ($row['site_status'] == 5) { ?>
+                    <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=7" class="btn btn-primary">Payment Request</a>
+                <?php } ?>
+            </p>
+        </div>
+    </div> 
+
 </body>
 <?php
 include('Foot.php');
