@@ -16,7 +16,7 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="Assets/Templates/Main/Assets/Templates/Main/lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="Assets/Templates/Main/lib/flaticon/font/flaticon.css" rel="stylesheet"> 
         <link href="Assets/Templates/Main/lib/animate/animate.min.css" rel="stylesheet">
         <link href="Assets/Templates/Main/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="Assets/Templates/Main/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-5">
+                                <div class="col-6">
                                     <div class="top-bar-item">
                                         <div class="top-bar-icon">
                                             <i class="flaticon-send-mail"></i>
