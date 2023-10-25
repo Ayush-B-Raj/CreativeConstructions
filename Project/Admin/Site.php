@@ -22,61 +22,42 @@ if(isset($_GET['sid'])){
 
 <body>
 <div class="container-fluid">
-    <div class="table-responsive">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>SLno</th>
-                <th>Site Details</th>
-                <th>Landmark</th>
-                <th>Location</th>
-                <th>Image</th>
-                <th>Plotarea</th>
-                <th>User Name</th>
-                <th>Engineer</th>
-                <th>Supervisor</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
+<div class="container mt-4">
+<?php
             $selQry = "select * from tbl_site s inner join tbl_place p on p.place_id=s.place_id inner join tbl_district d on p.district_id=d.district_id inner join tbl_user u on u.user_id=s.user_id where site_status>0 ";
             $res = $conn->query($selQry);
             $i = 0;
             while ($row = $res->fetch_assoc()) {
                 ?>
-                <tr>
-                    <td><?php echo ++$i ?></td>
-                    <td><?php echo $row['site_details'] ?></td>
-                    <td><?php echo $row['site_landmark'] ?></td>
-                    <td><?php echo $row['district_name'] . ", " . $row['place_name'] ?></td>
-                    <td>
-                    <a href="../Assets/Files/Request/Photo/<?php echo $row['site_image']?>" target="_blank">View Photo</a></td>
-                    <td><?php echo $row['site_plot'] ?></td>
-                    <td><?php echo $row['user_name'] ?></td>
-                    <td>
-                        <?php
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../Assets/Files/Request/Photo/<?php echo $row['site_image']?>" alt="User Photo" class="img-fluid rounded" style="
+    object-fit: cover;
+    height: 100%;
+">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 class="card-title"><?php echo $row['user_name'] ?></h4>
+                        <p class="card-text"><strong>Engineer:</strong><?php
                         if ($row['site_status'] >= 3) {
                             $gry = "select * from tbl_engineer where engineer_id=" . $row['engineer_id'];
                             $res3 = $conn->query($gry);
                             $row2 = $res3->fetch_assoc();
                             echo $row2['engineer_name'];
                         }
-                        ?>
-                    </td>
-                    <td>
-                        <?php
+                        ?></p>
+                        <p class="card-text"><strong>Supervisor:</strong><?php
                         if ($row['site_status'] > 8) {
                             $gryo = "select * from tbl_supervisor where supervisor_id=" . $row['supervisor_id'];
                             $reso3 = $conn->query($gryo);
                             $rowo2 = $reso3->fetch_assoc();
                             echo $rowo2['supervisor_name'];
                         }
-                        ?>
-                    </td>
-                    <td>
-                        <?php
+                        ?></p>
+                        <p class="card-text"><strong>Location:</strong><?php echo $row['district_name'] . ", " . $row['place_name'] ?></p>
+                        <p class="card-text"><strong>Status:</strong><?php
                         if ($row['site_status'] == 1) {
                             echo "<br>Work Approved<br>";
                         } else if ($row['site_status'] == 2) {
@@ -159,107 +140,16 @@ if(isset($_GET['sid'])){
                         if ($row['site_status'] == 33) {
                             echo "Payment Complete";
                         }
-                        ?>
-                    </td>
-                    <td>
-                        <?php
-                        if ($row['site_status'] == 1) {
-                            $selQRy1 = "select * from tbl_engineer";
-                            $res1 = $conn->query($selQRy1);
-                            $i = 0;
-                            ?>
-                            <select name="selEng" id="selEng">
-                                <option valu
-                                e="">Select Engineer</option>
-                                <?php
-                                while ($row1 = $res1->fetch_assoc()) {
-                                    ?>
-                                    <option value="<?php echo $row1['engineer_id'] ?>"><?php echo $row1['engineer_name'] ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select><br><br>
-                            <button type="button" onclick="assignEng(<?php echo $row['site_id'] ?>)">Assign</button>
-                            <?php
-                        }
-                        if ($row['site_status'] == 5) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=7">Payment Request</a>
-                            
-                            <?php
-                        }
-                        if ($row['site_status'] == 8) {
-                            $selQRy2 = "select * from tbl_supervisor";
-                            $res2 = $conn->query($selQRy2);
-                            $i = 0;
-                            ?>
-                            <select name="selSup" id="selSup">
-                                <option value="">Select Supervisor</option>
-                                <?php
-                                while ($row2 = $res2->fetch_assoc()) {
-                                    ?>
-                                    <option value="<?php echo $row2['supervisor_id'] ?>"><?php echo $row2['supervisor_name'] ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                            <button type="button" onclick="assignSup(<?php echo $row['site_id'] ?>)">Assign</button>
-                            <?php
-                        }
-                        if ($row['site_status'] == 10) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=11">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 13) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=14">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 16) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=17">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 19) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=20">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 22) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=23">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 25) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=26">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 28) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=29">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 31) {
-                            ?>
-                            <a href="PaymentReq.php?dida=<?php echo $row['site_id'] ?>&st=32">Payment Request</a>
-                            <?php
-                        }
-                        if ($row['site_status'] == 35) {
-                            ?>
-                            <a href="Site.php?sid=<?php echo $row['site_id']?>&st=36">Finished</a>
-                            <?php
-                        }
-                        ?>
-                    </td>
-                </tr>
-            <?php
+                        ?></p>
+                        <a href="ViewSite.php?sid=<?php echo $row['site_id'] ?>" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
             }
             ?>
-        </tbody>
-    </table>
-</div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-z3Fp0p12mqDEz1LktaI/4Sf+4PnFSeW0O438W8k+Kp2Bf5Sy9b/Tm5Fszr+ypD7F1" crossorigin="anonymous"></script>
