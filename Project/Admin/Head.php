@@ -32,7 +32,7 @@ session_start();
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="../Assets/Templates/Admin/assets/images/logo.svg" alt="logo" /></a>
+          <h3>CREATIVE CONSTRUCTIONS</h3>
           <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="../Assets/Templates/Admin/assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
