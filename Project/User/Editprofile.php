@@ -68,7 +68,7 @@ url("../Assets/Templates/Main/img/back1.jpg");
 	  width: 80%;
 	  margin: 0 auto;
   display: table;
-  padding: 0 0 8em 0;
+  
 }
 
 

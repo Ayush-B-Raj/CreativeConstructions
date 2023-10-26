@@ -54,7 +54,7 @@ url("../Assets/Templates/Main/img/back1.jpg");
 	  width: 80%;
 	  margin: 0 auto;
   display: table;
-  padding: 0 0 8em 0;
+  
 }
 
 
@@ -150,37 +150,42 @@ table {
 
 </head>
 <body>
-  <div class="contai2ner">
-    <table class="container11">
-      <thead class="thead-dark">
-        <tr>
-          <th>Name</th>
-          <th>Contact</th>
-          <th>Email</th>
-          <th>Gender</th>
-          <th>Address</th>
-          <th>District</th>
-          <th>Place</th>
-          <th>Photo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
+   <div class="container mt-4">
+   <div class="row justify-content-center">
+    <div class="row">
+   <div class="col-lg-10">
+   <div class="card mx-auto" >
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                <?php
         $selQry = "select * from tbl_user u inner join tbl_place p on p.place_id=u.place_id inner join tbl_district d on p.district_id=d.district_id where user_id=" . $_SESSION['uid'];
         $res = $conn->query($selQry);
         $row = $res->fetch_assoc();
         ?>
-        <tr>
-          <td><?php echo $row['user_name'] ?></td>
-          <td><?php echo $row['user_contact'] ?></td>
-          <td><?php echo $row['user_email'] ?></td>
-          <td><?php echo $row['user_gender'] ?></td>
-          <td><?php echo $row['user_address'] ?></td>
-          <td><?php echo $row['district_name'] ?></td>
-          <td><?php echo $row['place_name'] ?></td>
-          <td><a href="../Assets/Files/User/Photo/<?php echo $row['user_photo']?>" target="_blank">View Photo</a></td>
-        </tr>
-      </tbody>
+                   <a href="../Assets/Files/User/Photo/<?php echo $row['user_photo']?>" target="_blank">
+                    <img src="../Assets/Files/User/Photo/<?php echo $row['user_photo'] ?>"  class="img-fluid" style="object-fit: cover;
+    height: 100%;">
+    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Name :</strong><?php echo $row['user_name'] ?></p>
+                        <p class="card-text"><strong>Contact :</strong><?php echo $row['user_contact'] ?> </p>
+                        <p class="card-text"><strong>Email :</strong><?php echo $row['user_email'] ?></p>
+                        <p class="card-text"><strong>Address :</strong><?php echo $row['user_address'] ?></p>
+                        <p class="card-text"><strong>Gender :</strong><?php echo $row['user_gender'] ?></p>
+                        <p class="card-text"><strong>District :</strong><?php echo $row['district_name'] ?></p>
+                        <p class="card-text"><strong>Place :</strong><?php echo $row['place_name'] ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+        
+ 
     </table>
   </div>
 

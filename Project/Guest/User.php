@@ -12,13 +12,15 @@ if(isset($_POST["btn_submit"]))
 	
 	$address = $_POST["txt_address"];
 	$placeid = $_POST["sel_place"];
+    $gender = $_POST["sel_gender"];
+   
 	$email   = $_POST["txt_email"];
 	
 	$password = $_POST["txt_password"];
 	
 	
-	$ins = "insert into tbl_user(user_name,user_contact,user_photo,user_address,place_id,user_email,user_password)
-	values('".$name."','".$contact."','".$uphoto."','".$address."','".$placeid."','".$email."','".$password."')";
+	$ins = "insert into tbl_user(user_name,user_contact,user_photo,user_address,user_gender,place_id,user_email,user_password)
+	values('".$name."','".$contact."','".$uphoto."','".$address."','".$gender."','".$placeid."','".$email."','".$password."')";
 	
 	if($conn->query($ins))
 	{
@@ -209,7 +211,7 @@ if(isset($_POST["btn_submit"]))
                                     </div>
                                     <div class="control-group">
                                         <input type="tel" pattern="^\d{10}$" name="txt_contact" class="form-control" id="contact" placeholder="Your Contact" required data-validation-required-message="Please enter your contact" />
-                                        <p class="help-block text-danger"></p>
+                                        <p class="help-block text-danger"></p> 
                                     </div>
                                     <div class="control-group">
     <input type="email" name="txt_email" class="form-control" id="email" placeholder="Your Email" required data-validation-required-message="Please enter your email" />
@@ -222,6 +224,15 @@ if(isset($_POST["btn_submit"]))
                                     <div class="control-group">
                                         <textarea class="form-control" name="txt_address" id="message" placeholder="Address" required data-validation-required-message="Please enter your Address"></textarea>
                                         <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                    <select class="form-control" style="background-color: transparent" required data-validation-required-message="Please select your Gender" name="sel_gender" id="sel_gender">
+        <option value="" style="text-align: center">Select Gender</option>
+        <option style="text-align: center" value="Male">Male</option>
+        <option style="text-align: center" value="Female">Female</option>
+        <option style="text-align: center" value="Other">Other</option>
+    </select>
+                        <p class="help-block text-danger"></p>
                                     </div>
                                      <div class="control-group">
                                         <select class="form-control" style="background-color:transparent" required data-validation-required-message="Please enter your District"  name="sel_district" id="sel_district" onchange="getPlace(this.value)">
@@ -269,12 +280,12 @@ if(isset($_POST["btn_submit"]))
             <div class="footer wow fadeIn" data-wow-delay="0.3s">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="footer-contact">
                                 <h2>Office Contact</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com<</p>
+                                <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
                                     <a href="../Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
                                     <a href="../Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
@@ -287,26 +298,29 @@ if(isset($_POST["btn_submit"]))
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <a href="../Assets/Templates/Main/">Building Construction</a>
-                                <a href="../Assets/Templates/Main/">House Renovation</a>
-                                <a href="../Assets/Templates/Main/">Architecture Design</a>
-                                <a href="../Assets/Templates/Main/">Interior Design</a>
-                                <a href="../Assets/Templates/Main/">Painting</a>
+                                <a >Building Construction</a>
+                                <a >House Renovation</a>
+                                <a >Architecture Design</a>
+                                <a >Interior Design</a>
+                                <a >Painting</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a href="../Assets/Templates/Main/">About Us</a>
-                                <a href="../Assets/Templates/Main/">Contact Us</a>
-                                <a href="../Assets/Templates/Main/">Our Team</a>
-                                <a href="../Assets/Templates/Main/">Projects</a>
-                                <a href="../Assets/Templates/Main/">Testimonial</a>
-                            </div>
+                                <a >About Us</a>
+                                <a >Contact Us</a>
+                                <a >Our Team</a>
+                                <a >Projects</a>
+                                
+                                </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
-                    
-                        
+                        <!--<div class="col-md-6 col-lg-3">
+                            <div class="newsletter">
+                                <h2>Newsletter</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu
+                                </p>
                                 <div class="form">
                                     <input class="form-control" placeholder="Email here">
                                     <button class="btn">Submit</button>
@@ -314,14 +328,14 @@ if(isset($_POST["btn_submit"]))
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="container footer-menu">
                     <div class="f-menu">
-                        <a href="../Assets/Templates/Main/">Terms of use</a>
-                        <a href="../Assets/Templates/Main/">Privacy policy</a>
-                        <a href="../Assets/Templates/Main/">Cookies</a>
-                        <a href="../Assets/Templates/Main/">Help</a>
-                        <a href="../Assets/Templates/Main/">FQAs</a>
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                       
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
                     </div>
                 </div>
                 <div class="container copyright">
@@ -334,7 +348,7 @@ if(isset($_POST["btn_submit"]))
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <!-- Footer End -->
 
             <a href="../Assets/Templates/Main/#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
