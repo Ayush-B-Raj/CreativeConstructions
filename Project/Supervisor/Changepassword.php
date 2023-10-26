@@ -43,7 +43,7 @@ if(isset($_POST['btn_update']))
 
 <body>
     <div class="container mt-5">
-        <form id="form1" name="form1" method="post" action="">
+        <form id="form1" name="form1" method="post" action=""> 
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card">
@@ -70,7 +70,9 @@ if(isset($_POST['btn_update']))
                         <div class="card-footer text-center">
                             <input type="submit" class="btn btn-primary" name="btn_update" id="btn_update"
                                 value="UPDATE" />
+                                
                         </div>
+
                     </div>
                 </div>
             </div>

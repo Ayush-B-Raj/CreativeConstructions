@@ -24,6 +24,7 @@ $row = $res->fetch_assoc();
 
 <!DOCTYPE html>
 <html>
+
 <body>
     <div class="container mt-5">
         <form name="form1" method="post" action="">
