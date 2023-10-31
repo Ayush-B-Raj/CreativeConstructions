@@ -69,7 +69,7 @@ if(isset($_GET['sid'])){
                     <td>
                         <?php
                         if ($row['site_status'] == 1) {
-                            echo "<br>Work Approved<br>";
+                            echo "<br>Work Approved<br>"; 
                         } else if ($row['site_status'] == 2) {
                             echo "Work Declined";
                         }

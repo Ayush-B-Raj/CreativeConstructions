@@ -70,11 +70,17 @@ $row = $res->fetch_assoc();
     height: 100%;
 ">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title"><strong>Name:</strong>
                                     <?php
+                                    if ($row['site_status'] >= 3) {
+                                        $gry = "select * from tbl_engineer where engineer_id=" . $row['engineer_id'];
+                                        $res3 = $conn->query($gry);
+                                        $row2 = $res3->fetch_assoc();
+                                    
                             echo $row2['engineer_name'];
+                                    }
                             ?>
                                 </h5>
                                 <p class="card-text"><strong>Contact:</strong>
@@ -118,6 +124,7 @@ $row = $res->fetch_assoc();
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-6">
                 <div class="card">
                     <div class="row no-gutters">

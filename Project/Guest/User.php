@@ -8,7 +8,7 @@ if(isset($_POST["btn_submit"]))
 	
 	$uphoto=$_FILES["file_photo"]['name'];
 	$temp=$_FILES['file_photo']['tmp_name'];
-	move_uploaded_file($temp,"../Assets/Files/User/".$uphoto);
+	move_uploaded_file($temp,"../Assets/Files/User/Photo".$uphoto);
 	
 	$address = $_POST["txt_address"];
 	$placeid = $_POST["sel_place"];

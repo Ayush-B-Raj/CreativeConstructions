@@ -23,7 +23,7 @@ session_start();
             <div class="col-lg-10">
                 <div class="card">
                     <div class="row no-gutters"> 
-                    <div class="col-md-5">
+                    <div class="col-md-5"> 
     <?php
     $selQry = "select * from tbl_user u inner join tbl_place p on p.place_id=u.place_id inner join tbl_district d on p.district_id=d.district_id where user_id=" . $_SESSION['uid'];
     $res = $conn->query($selQry);
