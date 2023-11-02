@@ -409,5 +409,32 @@ else{
 include('Foot.php');
 ob_flush();
 ?>
+<script src="../Assets/JQ/jQuery.js"></script>
+<script>
+function assignEng(sid){
+	
+	var eid = document.getElementById('selEng').value;
+	
+	$.ajax({
+		 url:"../Assets/AjaxPages/AjaxAssignEng.php?eid="+eid+"&&sid="+sid,
+		 success: function(html){
+			 alert(html)
+			 window.location="Site.php"
+		 }
+	 })
+}
+function assignSup(site){
+	
+	var supid = document.getElementById('selSup').value;
+	
+	$.ajax({
+		 url:"../Assets/AjaxPages/AjaxAssignSup.php?supid="+supid+"&&site="+site,
+		 success: function(html){
+			 alert(html)
+			 window.location="Site.php"
+		 }
+	 })
+}
+</script>
 
 </html>
