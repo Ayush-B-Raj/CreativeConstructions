@@ -58,8 +58,8 @@ if(isset($_GET['sid'])){
                         ?></p>
                         <p class="card-text"><strong>Location:</strong><?php echo $row['district_name'] . ", " . $row['place_name'] ?></p>
                         <p class="card-text"><strong>Status:</strong><?php
-                        if ($row['site_status'] == 1) {
-                            echo "<br>Work Approved<br>";
+                         if ($row['site_status'] == 1) {
+                            echo "<br>Work Approved<br>"; 
                         } else if ($row['site_status'] == 2) {
                             echo "Work Declined";
                         }
@@ -105,12 +105,18 @@ if(isset($_GET['sid'])){
                         if ($row['site_status'] == 16) {
                             echo "Framimng Completed";
                         }
+                        if ($row['site_status'] == 17) {
+                            echo "Payment Request Send";
+                        }
                         if ($row['site_status'] == 18) {
                             echo "Payment Complete";
                         }
                         if ($row['site_status'] == 19) {
                             echo "Rough Electrical, Plumbing, and HVAC
                             Completed";
+                        }
+                        if ($row['site_status'] == 20) {
+                            echo "Payment Request Send";
                         }
                         if ($row['site_status'] == 21) {
                             echo "Payment Complete";
@@ -119,12 +125,18 @@ if(isset($_GET['sid'])){
                             echo "Interior Finishes
                             Completed";
                         }
+                        if ($row['site_status'] == 23) {
+                            echo "Payment Request Send";
+                        }
                         if ($row['site_status'] == 24) {
                             echo "Payment Complete";
                         }
                         if ($row['site_status'] == 25) {
                             echo "Final Electrical, Plumbing, and HVAC
                             Completed";
+                        }
+                        if ($row['site_status'] == 26) {
+                            echo "Payment Request Send";
                         }
                         if ($row['site_status'] == 27) {
                             echo "Payment Complete";
@@ -133,15 +145,27 @@ if(isset($_GET['sid'])){
                             echo "Landscaping and Exterior Work
                             Completed";
                         }
+                        if ($row['site_status'] == 29) {
+                            echo "Payment Request Send";
+                        }
                         if ($row['site_status'] == 30) {
                             echo "Payment Complete";
                         }
                         if ($row['site_status'] == 31) {
-                            echo "Final Electrical, Plumbing, and HVAC
+                            echo "Cleaning and Punch List
                             Completed";
+                        }
+                        if ($row['site_status'] == 32) {
+                            echo "Payment Request Send";
                         }
                         if ($row['site_status'] == 33) {
                             echo "Payment Complete";
+                        }
+                        if ($row['site_status'] == 34) {
+                            echo "Supervisor has Finished the Work ";
+                        }
+                        if ($row['site_status'] == 35) {
+                            echo "Contract has been Completed";
                         }
                         ?></p>
                         <a href="ViewSite.php?sid=<?php echo $row['site_id'] ?>" class="btn btn-primary">View More</a>

@@ -82,6 +82,9 @@ $row = $res->fetch_assoc();
                             if ($row['site_status'] == 8) {
                                 echo "Payment Complete. Assign SUpervisor";
                             }
+                            if ($row['site_status'] == 9) {
+                                echo "Supervisor Assigned";
+                            }
                             if ($row['site_status'] == 10) {
                                 echo "Site Preparation COmpleted";
                             }
@@ -103,12 +106,18 @@ $row = $res->fetch_assoc();
                             if ($row['site_status'] == 16) {
                                 echo "Framimng Completed";
                             }
+                            if ($row['site_status'] == 17) {
+                                echo "Payment Request Send";
+                            }
                             if ($row['site_status'] == 18) {
                                 echo "Payment Complete";
                             }
                             if ($row['site_status'] == 19) {
                                 echo "Rough Electrical, Plumbing, and HVAC
                                 Completed";
+                            }
+                            if ($row['site_status'] == 20) {
+                                echo "Payment Request Send";
                             }
                             if ($row['site_status'] == 21) {
                                 echo "Payment Complete";
@@ -117,12 +126,18 @@ $row = $res->fetch_assoc();
                                 echo "Interior Finishes
                                 Completed";
                             }
+                            if ($row['site_status'] == 23) {
+                                echo "Payment Request Send";
+                            }
                             if ($row['site_status'] == 24) {
                                 echo "Payment Complete";
                             }
                             if ($row['site_status'] == 25) {
                                 echo "Final Electrical, Plumbing, and HVAC
                                 Completed";
+                            }
+                            if ($row['site_status'] == 26) {
+                                echo "Payment Request Send";
                             }
                             if ($row['site_status'] == 27) {
                                 echo "Payment Complete";
@@ -131,15 +146,27 @@ $row = $res->fetch_assoc();
                                 echo "Landscaping and Exterior Work
                                 Completed";
                             }
+                            if ($row['site_status'] == 29) {
+                                echo "Payment Request Send";
+                            }
                             if ($row['site_status'] == 30) {
                                 echo "Payment Complete";
                             }
                             if ($row['site_status'] == 31) {
-                                echo "Final Electrical, Plumbing, and HVAC
+                                echo "Cleaning and Punch List
                                 Completed";
+                            }
+                            if ($row['site_status'] == 32) {
+                                echo "Payment Request Send";
                             }
                             if ($row['site_status'] == 33) {
                                 echo "Payment Complete";
+                            }
+                            if ($row['site_status'] == 34) {
+                                echo "Supervisor has Finished the Work ";
+                            }
+                            if ($row['site_status'] == 35) {
+                                echo "Contract has been Completed";
                             }
                             ?>
                         </div>
@@ -196,8 +223,8 @@ $row = $res->fetch_assoc();
                                 class="btn btn-primary">Payment Request</a>
                             <?php } ?>
 
-                            <?php if ($row['site_status'] == 35) { ?>
-                            <a href="Site.php?sid=<?php echo $row['site_id']?>&st=36"
+                            <?php if ($row['site_status'] == 34) { ?>
+                            <a href="Site.php?sid=<?php echo $row['site_id']?>&st=35"
                                 class="btn btn-success">Finished</a>
                             <?php } ?>
 
@@ -212,13 +239,14 @@ $row = $res->fetch_assoc();
         <div class="row">
             <div class="col-lg-6">
                 <div class="card">
+                <div class="card-body">
                     <?php
             if ($row['site_status'] == 1) {
                 $selQRy1 = "select * from tbl_engineer";
                 $res1 = $conn->query($selQRy1);
                 $i = 0;
             ?>
-                    <div class="card-body">
+                    
                         <div class="row">
                             <div class="col">
                                 <select name="selEng" id="selEng" class="form-control">
@@ -241,7 +269,7 @@ $row = $res->fetch_assoc();
                                     class="btn btn-primary btn-block">Assign</button>
                             </div>
                         </div>
-                    </div>
+                    
                     <?php
             }
             else if($row['site_status'] >= 3){
@@ -279,7 +307,7 @@ $row = $res->fetch_assoc();
             ?>
                 </div>
             </div>
-
+        </div>
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">

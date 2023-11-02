@@ -313,10 +313,73 @@ td > a.pay-button {
     else if($row['site_status']==14){
       echo "Pay the amount for Framing";
     }
+    else if($row['site_status']==15){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==16){
+      echo "Framing Completed";
+    }
+    else if($row['site_status']==17){
+      echo " Pay the amount for Rough Electrical, Plumbing, and HVAC";
+    }
+    else if($row['site_status']==18){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==19){
+      echo "Rough Electrical, Plumbing, and HVAC Completed";
+    }
+    else if($row['site_status']==20){
+      echo " Pay the amount for Interior Finishes";
+    }
+    else if($row['site_status']==21){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==22){
+      echo "Interior Finishes Completed";
+    }
+    else if($row['site_status']==23){
+      echo "Pay the amount for Final Electrical, Plumbing, and HVAC";
+    }
+    else if($row['site_status']==24){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==25){
+      echo "Final Electrical, Plumbing, and HVAC Completed";
+    }
+    else if($row['site_status']==26){
+      echo "Pay the amount for Landscaping and Exterior Work";
+    }
+    else if($row['site_status']==27){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==28){
+      echo "Landscaping and Exterior Work Completed";
+    }
+    else if($row['site_status']==29){
+      echo "Pay the amount for Cleaning and Punch List";
+    }
+    else if($row['site_status']==30){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==31){
+      echo "Cleaning and Punch List Completed";
+    }
+    else if($row['site_status']==32){
+      echo "Pay for rest";
+    }
+    else if($row['site_status']==33){
+      echo "Payment Successfull";
+    }
+    else if($row['site_status']==34){
+      echo "Work is Completed";
+    }
+    else if($row['site_status']==35){
+      echo "Work is Completed";
+    }
       $selSUp="select * from tbl_supervisor where supervisor_id=".$row['supervisor_id'];
       $resSup=$conn->query($selSUp);
       if($dataSup=$resSup->fetch_assoc()){
-        echo "Name: ".$dataSup['supervisor_name'];
+        echo "<br>Name: ".$dataSup['supervisor_name'];
         echo "<br>Contact: ".$dataSup['supervisor_contact'];
       }
 
@@ -368,6 +431,10 @@ td > a.pay-button {
       ?>
         <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=12&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
 	<?php
+      }
+      if($row['site_status']==13)
+      {
+        echo "Payment will be Enabled Soon...";
       }
       if($row['site_status']==14)
       {
@@ -422,6 +489,10 @@ td > a.pay-button {
       ?>
         <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=30&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
 	<?php
+      }
+      if($row['site_status']==31)
+      {
+        echo "Payment will be Enabled Soon...";
       }
       if($row['site_status']==32)
       {

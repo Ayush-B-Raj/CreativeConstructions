@@ -223,13 +223,17 @@ td > a.pay-button {
 		   echo "Supervisor Assigned";
 		   echo "<br>Work Started";
 	   }
-	   elseif($row['site_status']>9 || $row['site_status']<=33)
+	   elseif($row['site_status']>9 && $row['site_status']<=33)
 	   {
 		   echo "Work in Progress";
 	   }
-	   else if($row['site_status']==34)
+	    if($row['site_status']==34)
 	   {
 		   echo "Supervisor Finished Work";
+	   }
+	   if($row['site_status']==35)
+	   {
+		   echo "Contract has been completed";
 	   }
 	   ?></td>
       <td>

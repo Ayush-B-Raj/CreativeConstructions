@@ -218,47 +218,98 @@ td > a.pay-button {
                 <br>
               <?php
               } else if ($row['site_status'] == 10) {
-                echo "Hold the work until payment is complete";
-              } else if ($row['site_status'] == 12) {
+                echo "Hold the work until payment is complete"; 
+              }else if ($row['site_status'] == 11) {
+                echo " payment is pending..";
+              }
+               else if ($row['site_status'] == 12) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=13" class="btn btn-success">Foundation Completed</a>
                 <br>
               <?php
-              } else if ($row['site_status'] == 15) {
+
+                } else if ($row['site_status'] == 13) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 14) {
+                echo " payment is pending..";
+              }
+              else if ($row['site_status'] == 15) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=16" class="btn btn-success">Framing Completed</a>
                 <br>
               <?php
-              } else if ($row['site_status'] == 18) {
+              } else if ($row['site_status'] == 16) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 17) {
+                echo " payment is pending..";
+              }
+              else if ($row['site_status'] == 18) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=19" class="btn btn-success">Rough Electrical, Plumbing, and HVAC Completed</a>
                 <br>
               <?php
+              } else if ($row['site_status'] == 19) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 20) {
+                echo " payment is pending..";
+      
               } else if ($row['site_status'] == 21) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=22" class="btn btn-success">Interior Finishes Completed</a>
                 <br>
               <?php
+               } else if ($row['site_status'] == 22) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 23) {
+                echo " payment is pending..";
+      
               } else if ($row['site_status'] == 24) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=25" class="btn btn-success">Final Electrical, Plumbing, and HVAC Completed</a>
                 <br>
               <?php
+               } else if ($row['site_status'] == 25) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 26) {
+                echo " payment is pending..";
+      
               } else if ($row['site_status'] == 27) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=28" class="btn btn-success">Landscaping and Exterior Work Completed</a>
                 <br>
               <?php
+               } else if ($row['site_status'] == 28) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 29) {
+                echo " payment is pending..";
+      
               } else if ($row['site_status'] == 30) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=31" class="btn btn-success">Cleaning and Punch List Completed</a>
                 <br>
               <?php
+              } else if ($row['site_status'] == 31) {
+                echo "Hold the work until payment is complete"; 
+              } 
+              else if ($row['site_status'] == 32) {
+                echo " payment is pending..";
               } else if ($row['site_status'] == 33) {
                 ?>
                 <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=34" class="btn btn-success">Finished</a>
                 <br>
               <?php
+              }
+              else if ($row['site_status'] == 34) {
+                echo " Finished";
+              }
+              else if ($row['site_status'] == 35) {
+                echo " Finished";
               }
               ?>
             </td>
