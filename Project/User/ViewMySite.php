@@ -367,9 +367,9 @@ $row = $res->fetch_assoc();
                         }
                         if ($row['site_status'] == 4) {
                         ?>
-                            <a href="MySite.php?did=<?php echo $row['site_id']?>"class="btn btn-primary">Accept</a>
+                            <a href="ViewMySite.php?did=<?php echo $row['site_id']?>"class="btn btn-primary">Accept</a>
                             
-                            <a href="MySite.php?dido=<?php echo $row['site_id']?>"class="btn btn-primary">Reject</a>
+                            <a href="ViewMySite.php?dido=<?php echo $row['site_id']?>"class="btn btn-primary">Reject</a>
                         <?php
                         }
                         ?>
