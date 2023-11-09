@@ -55,23 +55,23 @@ if(isset($_GET['dido']))
 
 <body>
     <div class="container mt-5">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
             <tr>
                 <th>SLno</th>
-                <th>Site ID</th>
                 <th>Site Details</th>
                 <th>Landmark</th>
                 <th>Location</th>
                 <th>Image</th>
                 <th>Plotarea</th>
                 <th>User Name</th>
-                <th>Status</th>
+                <th>User Contact</th>
                 <th>Action</th>
             </tr>
             <?php
             $selQry = "SELECT * FROM tbl_site u
                 INNER JOIN tbl_place p ON p.place_id=u.place_id
                 INNER JOIN tbl_district d ON p.district_id=d.district_id
+                inner join tbl_user us on us.user_id=u.user_id 
                 WHERE site_status=0";
             $res = $conn->query($selQry);
             $i = 0;
@@ -79,14 +79,14 @@ if(isset($_GET['dido']))
             ?>
             <tr>
                 <td><?php echo ++$i ?></td>
-                <td><?php echo $row['site_id'] ?></td>
                 <td><?php echo $row['site_details'] ?></td>
                 <td><?php echo $row['site_landmark'] ?></td>
-                <td><?php echo $row['district_name'], " ", $row['place_name'] ?></td>
+                <td><?php echo $row['place_name'], ",", $row['district_name'] ?></td>
                 <td><a href="../Assets/Files/Request/Photo/<?php echo $row['site_image']?>" target="_blank">View Photo</a></td>
                 <td><?php echo $row['site_plot'] ?></td>
-                <td><?php echo $_SESSION['uname'] ?></td>
-                <td><?php echo $row['site_status'] ?></td>
+                <td><?php echo $row['user_name'] ?></td>
+                <td><?php echo $row['user_contact'] ?></td>
+
                 <td>
                     <a href="NewRequest.php?did=<?php echo $row['site_id'] ?>" class="btn btn-success">Accept</a>
                     <a href="NewRequest.php?dido=<?php echo $row['site_id'] ?>" class="btn btn-danger">Reject</a>

@@ -21112,6 +21112,7 @@ div.tagsinput {
   position: relative; }
 
 .main-panel {
+  
   transition: width 0.25s ease, margin 0.25s ease;
   width: 100%;
   min-height: calc(100vh - 70px);
@@ -21122,6 +21123,7 @@ div.tagsinput {
   flex-direction: column; }
   @media (max-width: 991px) {
     .main-panel {
+      
       margin-left: 0;
       width: 100%; } }
 

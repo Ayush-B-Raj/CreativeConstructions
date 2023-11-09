@@ -13,10 +13,11 @@ include('Head.php');
 $resP=$conn->query($selQryP);
 $row=$resP->fetch_assoc();
 if($row['payedTotal']!=NULL){
-    $costest=$row['payedTotal'];
+    $costest-=$row['payedTotal'];
 }	
 	$amount=($costest - $tenPercent);
-	echo "<br> Total Estimate Of the Site :".$costest;
+	echo "<br> Total Estimate Of the Site :".$ro['site_estimate'];
+	echo "<br> Total Left To Be Paid :".$costest;
 	echo " <br> Amount To Be Paid :".$tenPercent;
 	
 	

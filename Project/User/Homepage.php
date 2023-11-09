@@ -107,6 +107,9 @@ session_start();
                                 </div>
                                 <a href="Request.php" class="nav-item nav-link">REQUEST FOR A CONTRACT</a>
                                 <a href="MySite.php" class="nav-item nav-link">MY SITE</a>
+                                <a href="ViewReview.php" class="nav-item nav-link ">Review</a>
+                                <a href="Complaint.php" class="nav-item nav-link ">Complaint</a>
+
                             </div>
                             <div class="ml-auto">
                                 <a class="btn" href="../Logout.php">Sign Out</a>

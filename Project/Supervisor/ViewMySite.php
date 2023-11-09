@@ -1,7 +1,17 @@
 <?php
 include("../Assets/Connection/Connection.php");
 ob_start();
-
+if(isset($_GET['id'])){
+	$updQry="update tbl_site set site_status='".$_GET['st']."' where site_id=".$_GET['id'];
+	if($conn->query($updQry)){
+	  ?>
+	  <script>
+		alert('Updated')
+    window.location='ViewMySite.php?sid=<?php echo $_GET['id'] ?>'
+		</script>
+		<?php
+	}
+  }
 
 
 include('Head.php');
@@ -61,7 +71,7 @@ $row = $res->fetch_assoc();
                         <?php
               if ($row['site_status'] == 9) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=10" class="btn btn-success">Site Preparation Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=10" class="btn btn-success">Site Preparation Completed</a>
                 <br>
               <?php
               } else if ($row['site_status'] == 10) {
@@ -71,7 +81,7 @@ $row = $res->fetch_assoc();
               }
                else if ($row['site_status'] == 12) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=13" class="btn btn-success">Foundation Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=13" class="btn btn-success">Foundation Completed</a>
                 <br>
               <?php
 
@@ -83,7 +93,7 @@ $row = $res->fetch_assoc();
               }
               else if ($row['site_status'] == 15) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=16" class="btn btn-success">Framing Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=16" class="btn btn-success">Framing Completed</a>
                 <br>
               <?php
               } else if ($row['site_status'] == 16) {
@@ -94,7 +104,7 @@ $row = $res->fetch_assoc();
               }
               else if ($row['site_status'] == 18) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=19" class="btn btn-success">Rough Electrical, Plumbing, and HVAC Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=19" class="btn btn-success">Rough Electrical, Plumbing, and HVAC Completed</a>
                 <br>
               <?php
               } else if ($row['site_status'] == 19) {
@@ -105,7 +115,7 @@ $row = $res->fetch_assoc();
       
               } else if ($row['site_status'] == 21) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=22" class="btn btn-success">Interior Finishes Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=22" class="btn btn-success">Interior Finishes Completed</a>
                 <br>
               <?php
                } else if ($row['site_status'] == 22) {
@@ -116,7 +126,7 @@ $row = $res->fetch_assoc();
       
               } else if ($row['site_status'] == 24) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=25" class="btn btn-success">Final Electrical, Plumbing, and HVAC Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=25" class="btn btn-success">Final Electrical, Plumbing, and HVAC Completed</a>
                 <br>
               <?php
                } else if ($row['site_status'] == 25) {
@@ -127,7 +137,7 @@ $row = $res->fetch_assoc();
       
               } else if ($row['site_status'] == 27) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=28" class="btn btn-success">Landscaping and Exterior Work Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=28" class="btn btn-success">Landscaping and Exterior Work Completed</a>
                 <br>
               <?php
                } else if ($row['site_status'] == 28) {
@@ -138,7 +148,7 @@ $row = $res->fetch_assoc();
       
               } else if ($row['site_status'] == 30) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=31" class="btn btn-success">Cleaning and Punch List Completed</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=31" class="btn btn-success">Cleaning and Punch List Completed</a>
                 <br>
               <?php
               } else if ($row['site_status'] == 31) {
@@ -148,7 +158,7 @@ $row = $res->fetch_assoc();
                 echo " payment is pending..";
               } else if ($row['site_status'] == 33) {
                 ?>
-                <a href="MySite.php?sid=<?php echo $row['site_id'] ?>&st=34" class="btn btn-success">Finished</a>
+                <a href="ViewMySite.php?id=<?php echo $row['site_id'] ?>&st=34" class="btn btn-success">Finished</a>
                 <br>
               <?php
               }

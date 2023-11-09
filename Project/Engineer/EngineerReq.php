@@ -10,14 +10,24 @@ if(isset($_POST['btn_submit']))
 	$tempphoto2=$_FILES['txt_sitemodel']['tmp_name'];
 	move_uploaded_file($tempphoto,'../Assets/Files/SketchupGallery/Photo/'.$sitesketchup);
 	move_uploaded_file($tempphoto2,'../Assets/Files/SitemodelGallery/Photo/'.$sitemodel);
-	$insQry="update tbl_site set site_estimate='".$siteestimate."',site_sketchup='".$sitesketchup."',site_model='".$sitemodel."',site_status=4 where site_id=".$_GET['sid'];
+    $insQry="update tbl_site set site_estimate='".$siteestimate."',site_sketchup='".$sitesketchup."',site_model='".$sitemodel."',site_status=4 where site_id=".$_GET['sid'];
 	if($conn->query($insQry))
 	{
-		echo "Inserted";
-	}
+        ?>
+   <script>
+        alert('Submitted');
+        window.location="ViewMySite.php?sid=<?php echo $_GET['sid'] ?>"
+        </script>
+    <?php
+    }
 	else
 	{
-		echo "Failed";
+		?>
+        <script>
+             alert('Failed');
+             window.location="ViewMySite.php?sid=<?php echo $_GET['sid'] ?>"
+             </script>
+         <?php
 	}
 }
 ?>

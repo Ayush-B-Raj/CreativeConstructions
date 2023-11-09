@@ -17,7 +17,25 @@ if(isset($_POST["btn_submit"]))
 	$email   = $_POST["txt_email"];
 	
 	$password = $_POST["txt_password"];
-	
+
+    $selAdmin="select * from tbl_admin where admin_email='".$email."' ";
+	$selUser="select * from tbl_user where user_email='".$email."' ";
+	$selEngineer="select * from tbl_engineer where engineer_email='".$email."' ";
+	$selSupervisor="select * from tbl_supervisor where supervisor_email='".$email."'";
+	$resAdmin=$conn->query($selAdmin);
+	$resUser=$conn->query($selUser);
+	$resEngineer=$conn->query($selEngineer);
+	$resSupervisor=$conn->query($selSupervisor);
+
+    if($resAdmin->num_rows>0 ||$resUser->num_rows>0 ||$resEngineer->num_rows>0 ||$resSupervisor->num_rows>0 || )
+    {
+        ?>
+        <script>
+                alert("Email Already Exist!!!!");
+        </script>
+        <?php
+    }
+	else{
 	
 	$ins = "insert into tbl_user(user_name,user_contact,user_photo,user_address,user_gender,place_id,user_email,user_password)
 	values('".$name."','".$contact."','".$uphoto."','".$address."','".$gender."','".$placeid."','".$email."','".$password."')";
@@ -38,6 +56,7 @@ if(isset($_POST["btn_submit"]))
 		
 	}
 	}
+}
 
 
 ?>

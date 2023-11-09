@@ -16,11 +16,21 @@ if(isset($_POST['txt_submit']))
 	
 	if($conn->query($insQry))
 	{
-		echo "Inserted";
+    ?>
+    <script>
+    alert("Updated")
+    window.location="MySite.php"
+    </script>
+    <?php
 	}
 	else
 	{
-		echo "Failed";
+    ?>
+    <script>
+    alert("Failed")
+    window.location="Request.php"
+    </script>
+    <?php
 	}
 }
 ?>	

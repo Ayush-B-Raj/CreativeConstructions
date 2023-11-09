@@ -53,14 +53,7 @@ session_start();
           <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
           </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
-              </span>
-              <span class="menu-title">Dashboard</span> 
-            </a>
-          </li>
+         
           <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
@@ -113,6 +106,14 @@ session_start();
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Site</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="ViewComplaint.php">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">View Complaint</span>
             </a>
           </li>
           <li class="nav-item menu-items">

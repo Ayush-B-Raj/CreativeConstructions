@@ -18,7 +18,7 @@ if(isset($_POST['btn_submit']))
 		$data=$resAdmin->fetch_assoc();
 		$_SESSION['aid']=$data['admin_id'];
 		$_SESSION['aname']=$data['admin_name'];
-		header("location: ../Admin/Homepage.php");
+		header("location: ../Admin/Site.php");
 	}
 	else if($resUser->num_rows>0)
 	{

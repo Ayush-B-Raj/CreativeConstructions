@@ -2,7 +2,48 @@
 include("../Assets/Connection/Connection.php");
 ob_start();
 
-
+if(isset($_GET['did']))
+{
+	$delQry="update tbl_site set site_status=5 where site_id=".$_GET['did'];
+	if($conn->query($delQry))
+	{
+		 ?>
+         <script>
+         alert("Updated")
+      window.location="ViewMySite.php?sid=<?php echo $_GET['did'] ?>"
+         </script>
+         <?php
+	}
+	else
+	 {?>
+         <script>
+         alert("Failed")
+      window.location="ViewMySite.php?sid=<?php echo $_GET['did'] ?>"
+         </script>
+         <?php
+	 }
+}
+if(isset($_GET['dido']))
+{
+	$delQryw="update tbl_site set site_status=6 where site_id=".$_GET['dido'];
+	if($conn->query($delQryw))
+	{
+		 ?>
+         <script>
+         alert("Updated")
+         window.location="ViewMySite.php?sid=<?php echo $_GET['dido'] ?>"
+         </script>
+         <?php
+	}
+	else
+	 {?>
+         <script>
+         alert("Failed")
+         window.location="ViewMySite.php?sid=<?php echo $_GET['dido'] ?>"
+         </script>
+         <?php
+	 }
+}
 
 include('Head.php');
 $selQry = "select * from tbl_site s inner join tbl_place p on p.place_id=s.place_id inner join tbl_district d on p.district_id=d.district_id inner join tbl_user u on u.user_id=s.user_id where site_id= ".$_GET['sid'];
@@ -178,7 +219,7 @@ $row = $res->fetch_assoc();
                         justify-content: center;
                         align-items: flex-end;
                         ">
-                        <div class="d-flex justify-content-between">
+                        <div >
 
                         <?php
     $selQryp="select * from tbl_payment where payment_status=0 and site_id=".$row['site_id'];
@@ -198,8 +239,13 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=8&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=8&pt=1&sid=<?php echo $row['site_id']?>" class="btn btn-primary">Pay Now</a>
 	<?php
+      }
+      if($row['site_status']==10)
+      {
+        echo "Payment will be Enabled Soon...";
       }
       if($row['site_status']==11)
       {
@@ -207,7 +253,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=12&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=12&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==13)
@@ -220,7 +267,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=15&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=15&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==17)
@@ -229,7 +277,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=18&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=18&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==20)
@@ -238,7 +287,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=21&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=21&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==23)
@@ -247,7 +297,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=24&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=24&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==26)
@@ -256,7 +307,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=27&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=27&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==29)
@@ -265,7 +317,8 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=30&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=30&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==31)
@@ -278,13 +331,22 @@ $row = $res->fetch_assoc();
 	echo " <br> Amount To Be Paid :".$rowp['payment_amount'];
 	echo " <br> Due Date :".$rowp['payment_duedate'];
       ?>
-        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=33&pt=1&sid=<?php echo $row['site_id']?>">Pay Now</a> 
+      <br>
+        <a href="Payment.php?pid=<?php echo $rowp['payment_id']?>&st=33&pt=1&sid=<?php echo $row['site_id']?>"class="btn btn-primary">Pay Now</a>
 	<?php
       }
       if($row['site_status']==34)
       {
       ?>
+      <br>
         <a href="MySite.php?sid=<?php echo $row['site_id']?>&st=35">Finished</a>
+	<?php
+      }
+      if($row['site_status']==35)
+      {
+      ?>
+      <br>
+        <a href="Review.php" class="btn btn-warning">Review</a>
 	<?php
       }
       ?>
@@ -305,17 +367,37 @@ $row = $res->fetch_assoc();
                 <div class="col-lg-4">
                     <div class="card-text">
                         <p class="card-text"><strong>Site SketchUp:</strong>
+                        <?php 
+                        if($row['site_sketchup']==""){
+                            echo '--------';
+                        }
+                        else{
+                            ?>
                             <a href="../Assets/Files/SketchupGallery/Photo/<?php echo $row['site_sketchup']?>" target="_blank">
                                 <img src="../Assets/Files/SketchupGallery/Photo/<?php echo $row['site_sketchup']?>" alt="Property Photo" class="img-fluid" style="object-fit: cover; height: 100%;">
                             </a>
+                            <?php
+                        }
+                        ?>
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <p class="card-text"><strong>Site Model:</strong>
+                    <?php 
+                        if($row['site_model']==""){
+                            echo '--------';
+                        }
+                        else{
+                            ?>
+
                         <a href="../Assets/Files/SitemodelGallery/Photo/<?php echo $row['site_model']?>" target="_blank">
                             <img src="../Assets/Files/SitemodelGallery/Photo/<?php echo $row['site_model']?>" alt="Property Photo" class="img-fluid" style="object-fit: cover; height: 100%;">
                         </a>
+
+                        <?php
+                        }
+                        ?>
                     </p>
                 </div>
                 <div class="col-lg-4">

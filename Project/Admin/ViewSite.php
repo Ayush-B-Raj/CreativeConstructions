@@ -2,6 +2,23 @@
 include("../Assets/Connection/Connection.php");
 ob_start();
 include('Head.php');
+if(isset($_GET['id'])){
+    $updQry="update tbl_site set site_status='".$_GET['st']."' ";
+
+    if($_GET['st']==35)
+    {
+        $updQry = $updQry.",site_completedate=curdate()";
+    }
+    $updQry = $updQry." where site_id=".$_GET['id'];
+    if($conn->query($updQry)){
+      ?>
+      <script>
+        alert('Updated')
+        window.location="ViewSite.php?sid=<?php echo $_GET['id'] ?>"
+        </script>
+        <?php
+    }
+  }
 $selQry = "select * from tbl_site s inner join tbl_place p on p.place_id=s.place_id inner join tbl_district d on p.district_id=d.district_id inner join tbl_user u on u.user_id=s.user_id where site_id= ".$_GET['sid'];
 $res = $conn->query($selQry);
 $row = $res->fetch_assoc();
@@ -224,7 +241,7 @@ $row = $res->fetch_assoc();
                             <?php } ?>
 
                             <?php if ($row['site_status'] == 34) { ?>
-                            <a href="Site.php?sid=<?php echo $row['site_id']?>&st=35"
+                            <a href="ViewSite.php?id=<?php echo $row['site_id']?>&st=35"
                                 class="btn btn-success">Finished</a>
                             <?php } ?>
 
@@ -447,7 +464,7 @@ function assignEng(sid){
 		 url:"../Assets/AjaxPages/AjaxAssignEng.php?eid="+eid+"&&sid="+sid,
 		 success: function(html){
 			 alert(html)
-			 window.location="Site.php"
+			 window.location="ViewSite.php?sid="+ sid;
 		 }
 	 })
 }
@@ -459,7 +476,7 @@ function assignSup(site){
 		 url:"../Assets/AjaxPages/AjaxAssignSup.php?supid="+supid+"&&site="+site,
 		 success: function(html){
 			 alert(html)
-			 window.location="Site.php"
+			 window.location="ViewSite.php?sid="+ site;
 		 }
 	 })
 }

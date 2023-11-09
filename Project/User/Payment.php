@@ -163,7 +163,7 @@ include("../Assets/Connection/connection.php");
             {
             ?>
             <script>
-                window.location="Success.html"
+                window.location="Success.php"
                 </script>
             <?php
             }

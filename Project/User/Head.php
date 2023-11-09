@@ -105,6 +105,8 @@
                                     </div>
                                 </div>
                                 <a href="MySite.php" class="nav-item nav-link">Site</a>
+                                <a href="ViewReview.php" class="nav-item nav-link ">Review</a>
+
                                  <a href="../Logout.php" class="nav-item nav-link">Logout</a>
 
                             </div>

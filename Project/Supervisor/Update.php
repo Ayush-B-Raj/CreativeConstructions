@@ -13,12 +13,22 @@ if(isset($_POST['txt_submit']))
 	$insQry="insert into tbl_update(update_date,update_time,update_details,update_image,site_id) values('".$updatedate."','".$updatetime."','".$updatedetails."','".$updateimage."','".$_GET['did']."')";
 	if($conn->query($insQry))
 	{
-		echo "Inserted";
-	}
-	else
-	{
-		echo "Failed";
-	}
+        ?>
+        <script>
+             alert('Submitted');
+             window.location="ViewMySite.php?sid=<?php echo $_GET['did'] ?>"
+             </script>
+         <?php
+         }
+         else
+         {
+             ?>
+             <script>
+                  alert('Failed');
+                  window.location="ViewMySite.php?sid=<?php echo $_GET['did'] ?>"
+                  </script>
+              <?php
+         }
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
