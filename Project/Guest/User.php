@@ -1,3 +1,4 @@
+
 <?php
 include('../Assets/Connection/Connection.php');
 if(isset($_POST["btn_submit"]))
@@ -66,7 +67,7 @@ if(isset($_POST["btn_submit"]))
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Builderz - Construction Company Website Template</title>
+        <title>CREATIVE CONSTRUCTIONS</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Construction Company Website Template" name="keywords">
         <meta content="Construction Company Website Template" name="description">

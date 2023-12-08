@@ -50,7 +50,8 @@ if(isset($_POST['btn_submit']))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Form</title>
+	
+<title>CREATIVE CONSTRUCTIONS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="../Assets/Templates/Login/style.css">
