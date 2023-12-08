@@ -79,13 +79,13 @@ if(isset($_GET['sid'])){
                             echo "Payment Request Send";
                         }
                         if ($row['site_status'] == 8) {
-                            echo "Payment Complete. Assign SUpervisor";
+                            echo "Payment Complete. Assign Supervisor";
                         }
                         if ($row['site_status'] == 9) {
                             echo "Supervisor Assigned";
                         }
                         if ($row['site_status'] == 10) {
-                            echo "Site Preparation COmpleted";
+                            echo "Site Preparation Completed";
                         }
                         if ($row['site_status'] == 11) {
                             echo "Payment Request Send";
