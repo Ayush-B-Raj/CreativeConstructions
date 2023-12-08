@@ -9,10 +9,10 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-contact">
-                                <h2>Office Contact</h2>
+                            <h2>Office Contact</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>121 street ,muvattupuzha</p>
-                                <p><i class="fa fa-phone-alt"></i>+91 9876543221</p>
-                                <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com<</p>
+                                <p><i class="fa fa-phone-alt"></i>+91 7907576553</p>
+                                <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
                                     <a href="Template/Main/"><i class="fab fa-twitter"></i></a>
                                     <a href="Template/Main/"><i class="fab fa-facebook-f"></i></a>
@@ -25,22 +25,22 @@
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <a href="Template/Main/">Building Construction</a>
-                                <a href="Template/Main/">House Renovation</a>
-                                <a href="Template/Main/">Architecture Design</a>
-                                <a href="Template/Main/">Interior Design</a>
-                                <a href="Template/Main/">Painting</a>
-                                <a href="Template/Main/">Piping work</a>
-                                <a href="Template/Main/">Electric work</a>
+                                <h6>Building Construction</h6>
+                                <h6>House Renovation</h6>
+                                <h6>Architecture Design</h6>
+                                <h6>Interior Design</h6>
+                                <h6>Painting</h6>
+                                <h6>Piping work</h6>
+                                <h6>Electric work</h6>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a href="Template/Main/">About Us</a>
-                                <a href="Template/Main/">Contact Us</a>
-                                <a href="Template/Main/">Our Team</a>
-                                <a href="Template/Main/">Projects</a>
+                                <h6>About Us</h6>
+                                <h6>Contact Us</h6>
+                                <h6>Our Team</h6>
+                                <h6>Projects</h6>
                                 
                             </div>
                         </div>

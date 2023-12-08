@@ -21,8 +21,6 @@ include('Head.php');
 background-position:center;
 background-image:linear-gradient(rgba(0, 128, 0, 0.179),rgba(77, 37, 37, 0.136)),
 
-url("Assets/Templates/Main/img/back1.jpg");
-
     }
 h1{
 

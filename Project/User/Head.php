@@ -87,7 +87,7 @@
             <!-- Nav Bar Start -->
             <div class="nav-bar">
                 <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> 
                         
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
