@@ -42,10 +42,7 @@ $row = $res->fetch_assoc();
   <label for="txt_changecontact">CHANGE CONTACT</label>
             <input type="text" class="form-control" name="txt_contact" required="required" id="txt_changecontact" value="<?php echo $row['user_contact']?>">
   </div>
-  <div class="form-group">
-  <label for="txt_changeemail">CHANGE EMAIL</label>
-            <input type="email" class="form-control" name="txt_mail" required="required" id="txt_changeemail" value="<?php echo $row['user_email']?>">
-  </div>
+  
   <div class="form-group">
   <label for="txt_changeaddress">CHANGE ADDRESS</label>
             <input type="text" class="form-control" name="txt_address" required="required" id="txt_changeaddress" value="<?php echo $row['user_address']?>">

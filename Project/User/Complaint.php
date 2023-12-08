@@ -30,29 +30,44 @@ if(isset($_POST["btnsubmit"]))
              }
 }
 ?>
-<form id="form1" name="form1" method="post" action="">
-  <br><br><br><br>
-  <div id="tab">
- <h1 align="center">Complaint</h1>
- 
-    <table  align="center" width="449" border="1">
-      <tr>
-        <td width="60">Title</td>
-        <td>
-            <input type="text" name="txt_title" >
+<style>
+.card-title {
+      font-weight: bold;
+      margin: 0 auto;
+    }
 
-        </td>
-    </tr>
-       
-      <tr>
-        <td>Content</td>
-        <td><label for="txtcontent"></label>
-        <textarea name="txtcontent" id="txtcontent" cols="45" rows="5" autocomplete="off" required></textarea></td>
-      </tr>
-      <tr>
-        <td align="center"colspan="2"><input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" /></td>
-      </tr>
-    </table>
+    
+    </style>
+<body>
+
+<form id="form1" name="form1" method="post" action="">
+    <br><br><br><br>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title text-center">COMPLAINT</h1>
+            
+            <table class="table table-bordered" align="center" >
+                <tr>
+                    <td width="60"><strong>Title</strong></td>
+                    <td>
+                        <input type="text" name="txt_title" class="form-control">
+                    </td>
+                </tr>
+                   
+                <tr>
+                    <td><strong>Content</strong></td>
+                    <td>
+                        <textarea name="txtcontent" id="txtcontent" class="form-control" cols="45" rows="5" autocomplete="off" required></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="btn btn-primary" />
+                    </td>
+                </tr>
+            </table>
+            
 <p>&nbsp;</p>
   <?php
   $selQry="select * from tbl_complaint ";
@@ -60,41 +75,41 @@ if(isset($_POST["btnsubmit"]))
   if($rel->num_rows>0)
   {
 ?>
-  <table align="center" border="1">
-    <tr>
-      <td>Sl.No</td>
-      <td>Date</td>
-       <td>Content</td>
-      <td>Replay</td>
-    </tr>
-    <?php
-	$i=0;
-	
-	while($row=$rel->fetch_assoc())
-	{
-		$i++;
-?>
-<tr>
-	<td><?php echo $i?></td> 
-    <td><?php echo $row["complaint_date"]?></td> 
-     <td><?php echo $row["complaint_details"]?></td> 
-    <td><?php echo $row["complaint_reply"]?></td> 
+  <table class="table table-bordered table-striped" align="center">
+                <!-- Table headers -->
+                <tr>
+                    <td><strong>Sl.No</strong></td>
+                    <td><strong>Date</strong></td>
+                    <td><strong>Content</strong></td>
+                    <td><strong>Reply</strong></td>
+                </tr>
 
-
-</tr>
-<?php
-	}
-   }
-   else
-   {
-	   echo "<h1 align='center'>No Data Found<h1>";
-   }
-
-?>   
-  </table>
-  <p>&nbsp;</p>
+                <?php
+                $i=0;
+                while($row=$rel->fetch_assoc())
+                {
+                    $i++;
+                ?>
+                <tr>
+                    <td><?php echo $i?></td> 
+                    <td><?php echo $row["complaint_date"]?></td> 
+                    <td><?php echo $row["complaint_details"]?></td> 
+                    <td><?php echo $row["complaint_reply"]?></td> 
+                </tr>
+                <?php
+                }
+                }
+                else
+                {
+                    echo "<h1 align='center'>No Data Found<h1>";
+                }
+                ?>
+            </table>
+        </div>
+        <!-- End card-body -->
+    </div>
+    <!-- End card -->
 </form>
-</div>
 </body>
 <?php
 include("Foot.php");

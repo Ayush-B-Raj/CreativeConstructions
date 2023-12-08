@@ -35,6 +35,11 @@ if(isset($_POST['txt_submit']))
 	}
 }
 ?>	
+<style>
+    h1 {
+        text-align: center;
+    }
+    </style>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -43,6 +48,7 @@ if(isset($_POST['txt_submit']))
 </head>
 <body>
 <div class="container mt-4">
+    <h1> Supervisor Registration</h1>
     <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
         <table class="table table-bordered">
             <tr>

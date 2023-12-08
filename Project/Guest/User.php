@@ -27,7 +27,7 @@ if(isset($_POST["btn_submit"]))
 	$resEngineer=$conn->query($selEngineer);
 	$resSupervisor=$conn->query($selSupervisor);
 
-    if($resAdmin->num_rows>0 ||$resUser->num_rows>0 ||$resEngineer->num_rows>0 ||$resSupervisor->num_rows>0 || )
+    if($resAdmin->num_rows>0 ||$resUser->num_rows>0 ||$resEngineer->num_rows>0 ||$resSupervisor->num_rows>0 )
     {
         ?>
         <script>

@@ -95,19 +95,20 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                            <div class="navbar-nav mr-auto">
-                                <a href="HomePage.php" class="nav-item nav-link active">Home</a>
+                                <a href="HomePage.php" class="nav-item nav-link active">HOME</a>
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profile</a>
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFILE</a>
                                     <div class="dropdown-menu">
                                         <a href="Myprofile.php" class="dropdown-item">My Profile</a>
                                         <a href="Editprofile.php" class="dropdown-item">Edit Profile</a>
                                         <a href="Changepassword.php" class="dropdown-item">Change Password</a>
                                     </div>
                                 </div>
-                                <a href="MySite.php" class="nav-item nav-link">Site</a>
-                                <a href="ViewReview.php" class="nav-item nav-link ">Review</a>
+                                <a href="Request.php" class="nav-item nav-link">REQUEST FOR A CONTRACT</a> 
+                                <a href="MySite.php" class="nav-item nav-link">SITE</a>
+                                <a href="ViewReview.php" class="nav-item nav-link ">REVIEW</a>
 
-                                 <a href="../Logout.php" class="nav-item nav-link">Logout</a>
+                                 <a href="../Logout.php" class="nav-item nav-link">LOGOUT</a>
 
                             </div>
                             

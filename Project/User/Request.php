@@ -40,158 +40,42 @@ if(isset($_POST['txt_submit']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
+
 <style>
-  *{
-    margin:0;
-    padding:0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-  body {
-    font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  line-height: 1.42em;
-  color:black;
-  background-color:white;
-  background-size:cover;
-background-position:center;
-background-image:linear-gradient(rgba(0, 128, 0, 0.179),rgba(77, 37, 37, 0.136)),
-
-url("../Assets/Templates/Main/img/back1.jpg");
-  
-}
- .table {
-    width: 60%;
-    border-collapse: collapse; /* Merge cell borders */
-    border: 5px solid rgb(0,77,18); /* Main border for the table */
-   /* Add a subtle shadow */
-}
-.container td {
-	  font-weight: normal;
-	  font-size: 1em;
-  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
-	        box-shadow: 0 2px 2px -2px #0E1119;
-}
-.container th{
-	  font-weight: bold;
-	  font-size: 1em;
-  text-align: center;
-
-}
-.container {
-	  text-align: left;
-	  overflow: hidden;
-	  width: 80%;
-	  margin: 0 auto;
-  display: table;
-  padding: 0 0 8em 0;
-}
-
-
-
-
-.container td:hover {
-  background-color: #A7A1AE;
-  color: #185875;
-  font-weight: bold;
-  
-  box-shadow: #7F7C21 -1px 1px, #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21;
-  transform: translate3d(0px, 2px, 0px);
-  
-  transition-delay: 0s;
-	  transition-duration: 0.4s;
-}
-
-
-
-
-
-th, td {
-    padding: 8px;
-    text-align: left;
-    padding: 5px 10px;
-      text-align: center;
-      border: 3px solid rgb(20,92,37,0.9);
-}
-
-th {
-    background-color:rgb(20,92,37,0.7);
-    color: #fff;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-a {
-    text-decoration: none;
-    color: #0074cc;
-}
-
-/* Style for status labels */
-td > a {
-    display: inline-block;
-    padding: 5px 10px;
-
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    margin-right: 5px;
-}
-
-/* Style for 'Finished' button */
-td > a:last-child {
-    background-color: #4caf50;
-}
-
-/* Center the payment buttons */
-td > a.pay-button {
-    display: block;
-    width: 100px;
-    padding: 5px 10px;
-    background-color: #0074cc;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 5px;
-    text-align: center;
-
-    
-}
-table {
-        margin: 0 auto; /* Auto margins horizontally center the element */
+.card-header {
+      font-weight: bold;
+      margin: 0 auto;
     }
-
-    </style>
-
-
-
+    
+    .bold-label {
+      font-weight: bold;
+    }
+  </style>
 
 
 </head>
 
 <body>
-  <div class="contain56er">
-    <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="">
-      <table class="table table-bordered">
-        <tr>
-          <th>Site Details</th>
-          <td>
+<div class="container mt-5">
+        <form name="form1" method="post" enctype="multipart/form-data" action="">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header">Make a Contract</div>
+                        <div class="card-body">
+                        <div class="form-group">
+                        <label for="txt_sitedeatils" class="bold-label">Site Details </label>
             <textarea class="form-control" name="txt_sitedetails" id="txt_sitedetails" cols="45" rows="5" required="required"></textarea>
-          </td>
-        </tr>
-        <tr>
-          <th>Landmark</th>
-          <td>
+</div>
+<div class="form-group">
+  <label for="txt_landmark" class="bold-label">Landmark</label>
+          
             <input type="text" class="form-control" name="txt_landmark" id="txt_landmark" required="required" autocomplete="off" />
-          </td>
-        </tr>
-        <tr>
-          <th>District</th>
-          <td>
+</div>
+
+<div class="form-group">
+  <label for="txt_district" class="bold-label">Distict</label>
+          
             <select class="form-control" name="txt_district" id="txt_district" onchange="getPlace(this.value)" required>
               <option value="">SELECT DISTRICT</option>
               <?php
@@ -204,43 +88,36 @@ table {
               }
               ?>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <th>Place</th>
-          <td>
+            </div>
+            <div class="form-group">
+  <label for="txt_place" class="bold-label">Place</label>
+          
             <select class="form-control" name="txt_place" id="txt_place">
               <option value="">---SELECT PLACE---</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <th>Image</th>
-          <td>
+            </div>
+
+            <div class="form-group">
+  <label for="ins_photo" class="bold-label">Image</label>
             <input type="file" class="form-control-file" name="ins_photo" id="ins_photo" required="required" />
-          </td>
-        </tr>
-        <tr>
-          <th>Plot Area</th>
-          <td>
+            </div>
+
+            <div class="form-group">
+  <label for="txt_plot" class="bold-label">Plot Area</label>
             <input type="text" class="form-control" name="txt_plot" id="txt_plot" required="required" autocomplete="off" />
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
+            </div>
+    
+        <div class="card-footer text-center">
             <input type="submit" class="btn btn-primary" name="txt_submit" id="txt_submit" value="Submit" />
-          </td>
-        </tr>
-      </table>
-    </form>
+            </div>
   </div>
 
-  <!-- Include Bootstrap JS (optional) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="../Assets/JQ/jQuery.js"></script>
-  <script>
+            </div>
+            </div>
+        </form>
+    </div>
+  
+    <script>
     function getPlace(did) {
       $.ajax({
         url: "../Assets/AjaxPages/AjaxPlace.php?did=" + did,
@@ -250,6 +127,7 @@ table {
       })
     }
   </script>
+    
 </body>
 <?php
 include('Foot.php');
