@@ -73,7 +73,7 @@ if(isset($_POST['txt_submit']))
                 <tr>
                     <td>Password</td>
                     <td>
-                        <input type="password" class="form-control" name="txt_password" id="txt_password" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="required" autocomplete="off">
+                        <input type="password" class="form-control" name="txt_password" id="txt_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="required" autocomplete="off">
                     </td>
                 </tr>
                 <tr>

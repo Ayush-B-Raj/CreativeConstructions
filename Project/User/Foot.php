@@ -14,33 +14,28 @@
                                 <p><i class="fa fa-phone-alt"></i>+91 7907576553</p>
                                 <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
-                                    <a href="Template/Main/"><i class="fab fa-twitter"></i></a>
+                                    <!-- <a href="Template/Main/"><i class="fab fa-twitter"></i></a>
                                     <a href="Template/Main/"><i class="fab fa-facebook-f"></i></a>
                                     <a href="Template/Main/"><i class="fab fa-youtube"></i></a>
                                     <a href="Template/Main/"><i class="fab fa-instagram"></i></a>
-                                    <a href="Template/Main/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="Template/Main/"><i class="fab fa-linkedin-in"></i></a> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <h6>Building Construction</h6>
-                                <h6>House Renovation</h6>
-                                <h6>Architecture Design</h6>
-                                <h6>Interior Design</h6>
-                                <h6>Painting</h6>
-                                <h6>Piping work</h6>
-                                <h6>Electric work</h6>
+                                <p>Building Construction</p>
+                                <p>House Renovation</p>
+                                <p>Architecture Design</p>
+                                <p>Interior Design</p>
+                                <p>Painting</p>
+                                
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <h6>About Us</h6>
-                                <h6>Contact Us</h6>
-                                <h6>Our Team</h6>
-                                <h6>Projects</h6>
+                                
                                 
                             </div>
                         </div>

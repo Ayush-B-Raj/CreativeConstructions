@@ -174,50 +174,9 @@ if(isset($_POST["btn_submit"]))
                     <div class="row">
                         <div class="col-md-6">
                             <div class="contact-info">
-                               
-                               <!-- Testimonial Start -->
-            <div class="testimonial wow fadeIn" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                             <div class="testimonial-slider-nav">
-                                <div class="slider-nav"><img src="../Assets/Templates/Main/img/testimonial-1.png" alt="Testimonial"></div>
-                                <div class="slider-nav"><img src="../Assets/Templates/Main/img/testimonial-2.png" alt="Testimonial"></div>
-                                <div class="slider-nav"><img src="../Assets/Templates/Main/img/testimonial-3.png" alt="Testimonial"></div>
-                                <div class="slider-nav"><img src="../Assets/Templates/Main/img/testimonial-4.png" alt="Testimonial"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="testimonial-slider">
-                                <div class="slider-item">
-                                    <h3>Kurian C Able</h3>
-                                    <h4>Professional Photographer</h4>
-                                    <p>It's one of the trusted builder I have ever seen in Kerala with a professional support and very good staffs especially project handling team .Also they ensure to complete the projects as committed.Tension free experience</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Krishnan G</h3>
-                                    <h4>CEO Cozmek</h4>
-                                    <p>Everyone will have a dream. But it may not be always possible for them to achieve it. But my dream made true by these guys ... Heartfelt thanks </p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Adithya Krishnan</h3>
-                                    <h4>Guitarist</h4>
-                                    <p>Good and quality work .I recommend and suggest everybody that u can trust this company</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Eldhose PU</h3>
-                                    <h4>Professor</h4>
-                                    <p>Nice work. The entire team works with customers satisfaction.
-                       Team have hard work, co operative mentality..</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial End -->
+                            <img src="../Assets/Templates/Main/img/user.jpg" style="margin-left:80px;margin-top:250px" width="300" height="250"/>
+                    
+                                
                                 
                             </div>
                         </div>
@@ -230,7 +189,7 @@ if(isset($_POST["btn_submit"]))
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="control-group">
-                                        <input type="tel" pattern="^\d{10}$" name="txt_contact" class="form-control" id="contact" placeholder="Your Contact" required data-validation-required-message="Please enter your contact" />
+                                        <input type="tel" pattern="^\d{10}$" name="txt_contact" class="form-control" id="contact" placeholder="Your Contact" required data-validation-required-message="Please enter your contact" title="Must contain 10 digits" />
                                         <p class="help-block text-danger"></p> 
                                     </div>
                                     <div class="control-group">
@@ -238,6 +197,7 @@ if(isset($_POST["btn_submit"]))
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="control-group">
+                                        <label for="file_photo">Photo</label>
                                         <input type="file" name="file_photo"  class="form-control" id="file_photo" required data-validation-required-message="Please select Your Photo" />
                                         <p class="help-block text-danger"></p>
                                     </div>
@@ -281,7 +241,7 @@ if(isset($_POST["btn_submit"]))
                                     </div>
                                     
                                      <div class="control-group">
-    <input type="password" name="txt_password"  class="form-control" id="password" placeholder="Your Password" required data-validation-required-message="Please enter your Password" />
+    <input type="password" name="txt_password"  class="form-control" id="password" placeholder="Your Password" required data-validation-required-message="Please enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div>
@@ -307,34 +267,27 @@ if(isset($_POST["btn_submit"]))
                                 <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
                                 <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
-                                    <a href="../Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
-                                    <a href="../Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="../Assets/Templates/Main/"><i class="fab fa-youtube"></i></a>
-                                    <a href="../Assets/Templates/Main/"><i class="fab fa-instagram"></i></a>
-                                    <a href="../Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <a >Building Construction</a>
-                                <a >House Renovation</a>
-                                <a >Architecture Design</a>
-                                <a >Interior Design</a>
-                                <a >Painting</a>
+                                <p >Building Construction</p>
+                                <p >House Renovation</p>
+                                <p >Architecture Design</p>
+                                <p >Interior Design</p>
+                                <p >Painting</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a >About Us</a>
-                                <a >Contact Us</a>
-                                <a >Our Team</a>
-                                <a >Projects</a>
-                                
-                                </div>
+                                <a href="../Galleryshow.php">Gallery</a>
+                              
+                            </div>
                         </div>
+                        
                         <!--<div class="col-md-6 col-lg-3">
                             <div class="newsletter">
                                 <h2>Newsletter</h2>
@@ -349,7 +302,7 @@ if(isset($_POST["btn_submit"]))
                         </div>
                     </div>
                 </div>-->
-                <div class="container footer-menu">
+               <!-- <div class="container footer-menu">
                     <div class="f-menu">
                         <a href="">Terms of use</a>
                         <a href="">Privacy policy</a>
@@ -357,7 +310,7 @@ if(isset($_POST["btn_submit"]))
                         <a href="">Help</a>
                         <a href="">FQAs</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">
@@ -367,7 +320,7 @@ if(isset($_POST["btn_submit"]))
                             <p>CreativeconstructionsOfficial</a></p>
                         </div>
                     </div>
-                </div>
+                </div> 
             
             <!-- Footer End -->
 

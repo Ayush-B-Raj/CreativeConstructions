@@ -399,12 +399,7 @@
                                     <h2>JOHN PANACKAL</h2>
                                     <p>CEO & Founder</p>
                                 </div>
-                                <div class="team-social">
-                                    <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
-                                    <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="social-in" href="https://www.instagram.com/_.jooniee.__/"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -416,12 +411,7 @@
                                     <h2>GLADWIN P JOJO </h2>
                                     <p>Civil Engineer</p>
                                 </div>
-                                <div class="team-social">
-                                    <a class="social-tw" href=" https://x.com/gladwinpjojo?t=udfvQDtqVza9x9gLC5X1nA&s=08"><i class="fab fa-twitter"></i></a>
-                                    <a class="social-fb" href="https://www.facebook.com/gladwin.pjojo.1?mibextid=9R9pXO"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social-li" href="https://www.linkedin.com/in/gladwin-p-jojo-86a32727b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="social-in" href="https://instagram.com/_cyrus_._?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -433,12 +423,7 @@
                                     <h2>ANANTHA KRISHNA</h2>
                                     <p>Interior Designer</p>
                                 </div>
-                                <div class="team-social">
-                                    <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
-                                    <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="social-in" href="https://www.instagram.com/ig.ak.x/"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -450,12 +435,7 @@
                                     <h2>AYUSH B RAJ</h2>
                                     <p>Supervisor</p>
                                 </div>
-                                <div class="team-social">
-                                    <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
-                                    <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="social-in" href="https://www.instagram.com/ig.ayush_.r.j_/"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -523,33 +503,28 @@
                                 <p><i class="fa fa-phone-alt"></i>+91 9876543221</p>
                                 <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
-                                    <a href="Guest/Login.php"><i class="fab fa-twitter"></i></a>
+                                  <!--  <a href="Guest/Login.php"><i class="fab fa-twitter"></i></a>
                                     <a href="Guest/Login.php"><i class="fab fa-facebook-f"></i></a>
                                     <a href="Guest/Login.php"><i class="fab fa-youtube"></i></a>
                                     <a href="Guest/Login.php"><i class="fab fa-instagram"></i></a>
-                                    <a href="Guest/Login.php"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                                    <a href="Guest/Login.php"><i class="fab fa-linkedin-in"></i></a> -->
+                                </div> 
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <a href="Guest/Login.php">Building Construction</a>
-                                <a href="Guest/Login.php">House Renovation</a>
-                                <a href="Guest/Login.php">Architecture Design</a>
-                                <a href="Guest/Login.php">Interior Design</a>
-                                <a href="Guest/Login.php">Painting</a>
-                                <a href="Guest/Login.php">Piping work</a>
-                                <a href="Guest/Login.php">Electric work</a>
+                                <p >Building Construction</p>
+                                <p >House Renovation</p>
+                                <p >Architecture Design</p>
+                                <p >Interior Design</p>
+                                <p >Painting</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                     <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a>About Us</a>
-                                <a>Contact Us</a>
-                                <a>Our Team</a>
-                                <a>Projects</a>
+                                <a href="Galleryshow.php">Gallery</a>
                               
                             </div>
                         </div>
@@ -567,7 +542,7 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="container footer-menu">
+                <!-- <div class="container footer-menu">
                     <div class="f-menu">
                         <a href="">Terms of use</a>
                         <a href="">Privacy policy</a>
@@ -575,7 +550,7 @@
                         <a href="">Help</a>
                         <a href="">FQAs</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">

@@ -51,6 +51,9 @@ img{
 
     
 }
+tr{
+    align: center;
+}
 
 </style>
 

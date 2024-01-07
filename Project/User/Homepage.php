@@ -411,10 +411,12 @@ session_start();
                                     <p>CEO & Founder</p>
                                 </div>
                                 <div class="team-social">
+                                    <!--
                                     <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href="https://www.instagram.com/_.jooniee.__/"><i class="fab fa-instagram"></i></a>
+-->
                                 </div>
                             </div>
                         </div>
@@ -428,10 +430,12 @@ session_start();
                                     <p>Civil Engineer</p>
                                 </div>
                                 <div class="team-social">
+                                    <!--
                                     <a class="social-tw" href=" https://x.com/gladwinpjojo?t=udfvQDtqVza9x9gLC5X1nA&s=08"><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href="https://www.facebook.com/gladwin.pjojo.1?mibextid=9R9pXO"><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href="https://www.linkedin.com/in/gladwin-p-jojo-86a32727b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href="https://instagram.com/_cyrus_._?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+-->
                                 </div>
                             </div>
                         </div>
@@ -445,10 +449,12 @@ session_start();
                                     <p>Interior Designer</p>
                                 </div>
                                 <div class="team-social">
+                                    <!--
                                     <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href="https://www.instagram.com/ig.ak.x/"><i class="fab fa-instagram"></i></a>
+-->
                                 </div>
                             </div>
                         </div>
@@ -462,10 +468,11 @@ session_start();
                                     <p>Supervisor</p>
                                 </div>
                                 <div class="team-social">
-                                    <a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
+                                    <!--<a class="social-tw" href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href="https://www.instagram.com/ig.ayush_.r.j_/"><i class="fab fa-instagram"></i></a>
+-->
                                 </div>
                             </div>
                         </div>
@@ -534,33 +541,30 @@ session_start();
                                 <p><i class="fa fa-phone-alt"></i>+91 9876543221</p>
                                 <p><i class="fa fa-envelope"></i>creativeconstructions1995@gmail.com</p>
                                 <div class="footer-social">
-                                    <a href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
+                                  <!--  <a href="Assets/Templates/Main/"><i class="fab fa-twitter"></i></a>
                                     <a href="Assets/Templates/Main/"><i class="fab fa-facebook-f"></i></a>
                                     <a href="Assets/Templates/Main/"><i class="fab fa-youtube"></i></a>
                                     <a href="Assets/Templates/Main/"><i class="fab fa-instagram"></i></a>
                                     <a href="Assets/Templates/Main/"><i class="fab fa-linkedin-in"></i></a>
+-->
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <a href="Assets/Templates/Main/">Building Construction</a>
-                                <a href="Assets/Templates/Main/">House Renovation</a>
-                                <a href="Assets/Templates/Main/">Architecture Design</a>
-                                <a href="Assets/Templates/Main/">Interior Design</a>
-                                <a href="Assets/Templates/Main/">Painting</a>
-                                <a href="Assets/Templates/Main/">Piping work</a>
-                                <a href="Assets/Templates/Main/">Electric work</a>
+                                <p >Building Construction</p>
+                                <p >House Renovation</p>
+                                <p >Architecture Design</p>
+                                <p >Interior Design</p>
+                                <p >Painting</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
-                                <a href="Assets/Templates/Main/">About Us</a>
-                                <a href="Assets/Templates/Main/">Contact Us</a>
-                                <a href="Assets/Templates/Main/">Our Team</a>
-                                <a href="Assets/Templates/Main/">Projects</a>
+                                <a href="..\Galleryshow.php">Gallery</a>
+                               
                                 
                             </div>
                         </div>
@@ -579,13 +583,13 @@ session_start();
                     </div>
                 </div>-->
                 <div class="container footer-menu">
-                    <div class="f-menu">
+                    <!--<div class="f-menu">
                         <a href="Assets/Templates/Main/">Terms of use</a>
                         <a href="Assets/Templates/Main/">Privacy policy</a>
                        
                         <a href="Assets/Templates/Main/">Help</a>
                         <a href="Assets/Templates/Main/">FQAs</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="container copyright">
                     <div class="row">
